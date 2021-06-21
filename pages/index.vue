@@ -13,11 +13,11 @@
             </div>
           </article>
         </nuxt-link>
-        <nuxt-link :to="'/posts/' + 1">
+        <nuxt-link :to="'/posts/' + 2">
           <article>
             <div>
-              <h1>Post 1 title</h1>
-              <p>Post 1 text</p>
+              <h1>Post 2 title</h1>
+              <p>Post 2 text</p>
             </div>
           </article>
         </nuxt-link>
