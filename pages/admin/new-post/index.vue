@@ -33,12 +33,12 @@ export default {
     },
     methods: {
         onSave() {
-
+            console.log(this.editedPost);
         },
         onCancel() {
             // navigate back
             // to access router, we need "this" as it's required to access injected properties
-            this.$router.push('/admin')
+            this.$router.push('/admin');
         }
     }
     
