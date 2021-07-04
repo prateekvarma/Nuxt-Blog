@@ -36,7 +36,9 @@ export default {
 
         },
         onCancel() {
-            
+            // navigate back
+            // to access router, we need "this" as it's required to access injected properties
+            this.$router.push('/admin')
         }
     }
     
