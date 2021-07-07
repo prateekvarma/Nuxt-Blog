@@ -1,6 +1,6 @@
 <template>
     <div>
-        <admin-post-form />
+        <admin-post-form :post="loadedPost" />
     </div>
 </template>
 

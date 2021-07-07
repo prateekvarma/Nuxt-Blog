@@ -17,7 +17,7 @@ import AppButton from '~/components/UI/AppButton.vue'
 export default {
     data() {
         return {
-            editedPost: {
+            editedPost: this.post ? { ...this.post } : {
                 author: '',
                 title: '',
                 thumbnailLink: '',
@@ -28,6 +28,12 @@ export default {
     components: {
         AppControlInput,
         AppButton
+    },
+    props: {
+        post: {
+            type: Object,
+            required: false
+        }
     },
     methods: {
         onSave() {
