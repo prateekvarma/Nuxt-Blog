@@ -1,16 +1,12 @@
 <template>
     <div class="links">
-    <post-preview 
-        id="1"
-        thumbnail="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-        title="First title"
-        previewText="First Preview Text"
-    />
-    <post-preview 
-        id="2"
-        thumbnail="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-        title="Second title"
-        previewText="Second Preview Text"
+    <post-preview
+        v-for="post in posts"
+        :key="post.id"
+        :id="post.id"
+        :thumbnail="post.thumbnail"
+        :title="post.title"
+        :previewText="post.previewText"
     />
     </div>
 </template>
@@ -20,6 +16,12 @@ import PostPreview from '~/components/Posts/PostPreview.vue'
 export default {
     components: {
         PostPreview
+    },
+    props: {
+        posts: {
+            type: Array,
+            required: true
+        }
     }
 }
 </script>
